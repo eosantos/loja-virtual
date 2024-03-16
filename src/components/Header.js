@@ -59,6 +59,7 @@ const Header = () => {
             </button>
           </div>
         </header>
+
         {/* Modal do menu abaixo do cabeçalho */}
         {menuOpen && (
           <div className="absolute top-full right-0 md:left-auto w-50 md:w-50 bg-white border border-gray-200 shadow-md md:relative">

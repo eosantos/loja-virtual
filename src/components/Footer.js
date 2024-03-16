@@ -4,7 +4,10 @@ import { BsInstagram, BsFacebook, BsLinkedin, BsYoutube } from 'react-icons/bs'
 
 const Footer = () => {
   return (
-    <footer className="bg-stone-100 text-white py-6 px-8 absolute bottom-0 w-full">
+    <footer
+      className="bg-stone-100 text-white py-6 px-8 absolute bottom-0 w-full"
+      style={{ position: 'static' }}
+    >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <div>
           <nav className="md:flex space-x-4 text-slate-950">
