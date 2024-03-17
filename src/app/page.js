@@ -8,15 +8,22 @@ import { fetchProducts } from '../service/fetchProducts'
 import Card from '@/components/CardProduct'
 
 export default function Home() {
-  const [products, setProducts] = useState([])
+  const [menProducts, setMenProducts] = useState([])
+  const [womenProducts, setWomenProducts] = useState([])
 
   useEffect(() => {
-    const getProducts = async () => {
-      const productsData = await fetchProducts()
-      setProducts(productsData)
-      console.log(productsData) // Imprime os produtos no console
+    const getMenProducts = async () => {
+      const menProductsData = await fetchProducts("men's clothing")
+      setMenProducts(menProductsData)
     }
-    getProducts()
+
+    const getWomenProducts = async () => {
+      const womenProductsData = await fetchProducts("women's clothing")
+      setWomenProducts(womenProductsData)
+    }
+
+    getMenProducts()
+    getWomenProducts()
   }, [])
 
   return (
@@ -24,17 +31,32 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <CarouselComponent />
-        <h1>Masculino</h1>
-        <div className="flex flex-wrap justify-center">
-          {products.map((product, index) => (
-            <Card
-              key={index}
-              src={product.image}
-              title={product.title}
-              price={product.price}
-            />
-          ))}
-        </div>
+        <section>
+          <h1>Masculino</h1>
+          <div className="flex flex-wrap justify-center">
+            {menProducts.map((product, index) => (
+              <Card
+                key={index}
+                src={product.image}
+                title={product.title}
+                price={product.price}
+              />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h1>Feminino</h1>
+          <div className="flex flex-wrap justify-center">
+            {womenProducts.map((product, index) => (
+              <Card
+                key={index}
+                src={product.image}
+                title={product.title}
+                price={product.price}
+              />
+            ))}
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

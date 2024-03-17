@@ -1,10 +1,12 @@
-export async function fetchProducts() {
-  return fetch("https://fakestoreapi.com/products/category/men's%20clothing")
+export async function fetchProducts(category) {
+  return fetch(
+    `https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`,
+  )
     .then((res) => res.json())
     .then((json) => {
-      const fourProducts = json.slice(0, 6) // Captura apenas os 6 primeiros produtos
-      console.log(fourProducts)
-      return fourProducts // Retorna os produtos buscados
+      const sixProducts = json.slice(0, 6) // Captura apenas os 6 primeiros produtos
+      console.log(sixProducts)
+      return sixProducts // Retorna os produtos buscados
     })
     .catch((error) => {
       console.error('Erro ao obter produtos:', error)
