@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '@/components/Footer'
 import CarouselComponent from '@/components/Carousel'
@@ -11,6 +11,10 @@ import Section from '@/components/Section'
 export default function Home() {
   const [menProducts, setMenProducts] = useState([])
   const [womenProducts, setWomenProducts] = useState([])
+
+  // Criando referências para as seções
+  const menSectionRef = useRef(null)
+  const womenSectionRef = useRef(null)
 
   useEffect(() => {
     const getMenProducts = async () => {
@@ -29,11 +33,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Header menSectionRef={menSectionRef} womenSectionRef={womenSectionRef} />
       <main className="flex-grow">
         <CarouselComponent />
-        <Section title="Masculino" />
-
+        {/* Passando as referências para as seções */}
+        <Section ref={menSectionRef} title="Masculino" />
         <div className="flex flex-wrap justify-center mb-10">
           {menProducts.map((product, index) => (
             <Card
@@ -44,9 +48,7 @@ export default function Home() {
             />
           ))}
         </div>
-
-        <Section title="Feminino" />
-
+        <Section ref={womenSectionRef} title="Feminino" />
         <div className="flex flex-wrap justify-center mb-10">
           {womenProducts.map((product, index) => (
             <Card

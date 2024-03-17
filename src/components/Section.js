@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-const Section = ({ title }) => {
+// eslint-disable-next-line react/display-name
+const Section = forwardRef(({ title }, ref) => {
   return (
-    <section className="my-8">
+    <section ref={ref} className="my-8">
       <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
       <div className="flex justify-center">
         <div className="w-16 h-1 bg-black"></div>
       </div>
     </section>
   )
-}
+})
 
 export default Section

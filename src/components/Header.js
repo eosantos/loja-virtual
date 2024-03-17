@@ -2,9 +2,14 @@ import logo from '../assets/icon/logo.svg'
 import Image from 'next/image'
 import { useState } from 'react'
 
-const Header = () => {
+const Header = ({ menSectionRef, womenSectionRef }) => {
   // Usando useState apenas dentro de um Client Component
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const handleMenuClick = (ref, event) => {
+    event.preventDefault() // Impede o comportamento padrão do clique
+    ref.current.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div className="bg-red-50 relative">
@@ -16,10 +21,17 @@ const Header = () => {
           <nav className="hidden md:flex space-x-4 text-slate-950">
             <ul className="flex">
               <li className="hover:text-red-500 m-2">
-                <a href="/">Masculino</a>
+                <a href="/" onClick={(e) => handleMenuClick(menSectionRef, e)}>
+                  Masculino
+                </a>
               </li>
               <li className="hover:text-red-500 m-2">
-                <a href="/">Feminino</a>
+                <a
+                  href="/"
+                  onClick={(e) => handleMenuClick(womenSectionRef, e)}
+                >
+                  Feminino
+                </a>
               </li>
               <li className="hover:text-red-500 m-2">
                 <a href="/">Acessórios</a>
@@ -63,10 +75,20 @@ const Header = () => {
             <nav className="px-8 py-4 text-slate-950">
               <ul className="flex flex-col space-y-4">
                 <li className="hover:text-red-500 md:text-right">
-                  <a href="/">Masculino</a>
+                  <a
+                    href="/"
+                    onClick={(e) => handleMenuClick(menSectionRef, e)}
+                  >
+                    Masculino
+                  </a>
                 </li>
                 <li className="hover:text-red-500 md:text-right">
-                  <a href="/">Feminino</a>
+                  <a
+                    href="/"
+                    onClick={(e) => handleMenuClick(womenSectionRef, e)}
+                  >
+                    Feminino
+                  </a>
                 </li>
                 <li className="hover:text-red-500 md:text-right">
                   <a href="/">Acessórios</a>
