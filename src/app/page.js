@@ -60,7 +60,7 @@ export default function Home() {
           ))}
         </div>
       </main>
-      <Footer />
+      <Footer menSectionRef={menSectionRef} womenSectionRef={womenSectionRef} />
     </div>
   )
 }

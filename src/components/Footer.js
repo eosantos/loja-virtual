@@ -2,7 +2,12 @@ import logo from '../assets/icon/logo.svg'
 import Image from 'next/image'
 import { BsInstagram, BsFacebook, BsLinkedin, BsYoutube } from 'react-icons/bs'
 
-const Footer = () => {
+const Footer = ({ menSectionRef, womenSectionRef }) => {
+  const handleMenuClick = (ref, event) => {
+    event.preventDefault() // Impede o comportamento padrão do clique
+    ref.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <footer
       className="bg-stone-100 text-white py-6 px-8 absolute bottom-0 w-full"
@@ -13,10 +18,17 @@ const Footer = () => {
           <nav className="md:flex space-x-4 text-slate-950">
             <ul className="flex">
               <li className="hover:text-red-500 m-2 text-stone-900">
-                <a href="/">Masculino</a>
+                <a href="/" onClick={(e) => handleMenuClick(menSectionRef, e)}>
+                  Masculino
+                </a>
               </li>
               <li className="hover:text-red-500 m-2 text-stone-900">
-                <a href="/">Feminino</a>
+                <a
+                  href="/"
+                  onClick={(e) => handleMenuClick(womenSectionRef, e)}
+                >
+                  Feminino
+                </a>
               </li>
               <li className="hover:text-red-500 m-2 text-stone-900">
                 <a href="/">Acessórios</a>
