@@ -1,5 +1,3 @@
-'use client'
-
 import logo from '../assets/icon/logo.svg'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -10,7 +8,7 @@ const Header = () => {
 
   return (
     <div className="bg-red-50 relative">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto relative z-10">
         <header className="py-4 px-8 flex justify-between items-center">
           <div className="logo">
             <Image src={logo} alt="Store Logo" className="w-24" />
@@ -59,10 +57,9 @@ const Header = () => {
             </button>
           </div>
         </header>
-
         {/* Modal do menu abaixo do cabeçalho */}
         {menuOpen && (
-          <div className="absolute top-full right-0 md:left-auto w-50 md:w-50 bg-white border border-gray-200 shadow-md md:relative">
+          <div className="absolute top-full right-0 md:left-auto w-50 md:w-50 bg-white border border-gray-200 shadow-md md:relative z-20">
             <nav className="px-8 py-4 text-slate-950">
               <ul className="flex flex-col space-y-4">
                 <li className="hover:text-red-500 md:text-right">

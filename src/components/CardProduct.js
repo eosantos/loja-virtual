@@ -1,4 +1,3 @@
-// Card.js
 import Image from 'next/image'
 
 const Card = ({ src, title, price }) => {
