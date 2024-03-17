@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+💻 Sobre o projeto
 
-## Getting Started
+🔔 Projeto Loja Virtual
 
-First, run the development server:
+## Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Página web que mostre produtos da fakestoreapi.
+
+<br>
+<hr>
+<div align="center">
+	<img width="140" src="public/assets/Img/to_readme/Tela_001.png">	
+	<img width="590" src="public/assets/Img/to_readme/Tela_002.png">
+</div>
+<hr>
+<br>
+
+
+### Ferramentas
+
+- [NextJS](https://nextjs.org/)
+
+- [TailwindCss](https://tailwindcss.com/docs/installation)
+
+- [Git](https://git-scm.com/doc)
+
+### Montagem do ambiente de desenvolvimento
+
+O primeiro passo é clonar o projeto utilizando o método HTTPS ou SSH.
+
+SSH
+
+```sh
+git clone git@github.com:eosantos/loja-virtual.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+HTTPS
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```sh
+git clone https://github.com/eosantos/loja-virtual.git
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Instalar dependências do projeto
 
-## Learn More
+Com o comando abaixo instalamos todos os pacotes definidos no package.json para configuração do servidor local:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm i
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Acessando a aplicação
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para iniciar o projeto basta executar o comando abaixo:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```sh
+npm run dev
+```
+Após a execução do comando acima basta abrir o link `http://localhost:3000`.
