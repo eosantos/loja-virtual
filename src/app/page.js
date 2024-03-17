@@ -34,7 +34,7 @@ export default function Home() {
         <CarouselComponent />
         <Section title="Masculino" />
 
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center mb-10">
           {menProducts.map((product, index) => (
             <Card
               key={index}
@@ -47,7 +47,7 @@ export default function Home() {
 
         <Section title="Feminino" />
 
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center mb-10">
           {womenProducts.map((product, index) => (
             <Card
               key={index}

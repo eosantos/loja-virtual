@@ -7,29 +7,34 @@ const CarouselComponent = () => {
       <Carousel>
         <div className="relative w-full h-full">
           <Image
-            src="https://img.freepik.com/fotos-gratis/senhora-alegre-de-pe-com-sacolas-de-compras-sorrindo-e-olhando-fundo-rosa-feliz_1258-122868.jpg?w=1800&t=st=1710603251~exp=1710603851~hmac=f04226153456f201454d92c9ac3b257c4ebc77490a66a4909165400f7bc57efa"
-            alt="..."
+            src="https://img.freepik.com/fotos-gratis/imagem-de-uma-jovem-surpreendida-ofegando-espantada-segurando-a-mao-no-peito-e-sorrindo-atonita-com-a-venda_1258-121612.jpg?w=1800&t=st=1710707001~exp=1710707601~hmac=8239fac940cceb3acb236d6097a57a02bf33b6247f5fce53cdb542582f356c07"
+            alt="Banner_001"
             width={1800}
             height={1200}
             className="w-full h-full"
+            style={{ objectFit: 'cover' }}
           />
         </div>
         <div className="relative w-full h-full">
           <Image
-            src="https://img.freepik.com/fotos-gratis/homem-devidamente-feliz-mostrando-cartao-de-credito-e-sacolas-de-compras-em-pe-contra-fundo-turquesa_1258-155233.jpg?w=1800&t=st=1710603326~exp=1710603926~hmac=f7248d7f6a955c283c07de75566d70eaeffcdf12bd6c326532d1c850918a4746"
-            alt="..."
+            src="https://img.freepik.com/fotos-gratis/mulher-asiatica-atraente-mostrando-aplicativo-de-smartphone-e-sacolas-de-compras-online-via-aplicativo-standi_1258-156867.jpg?w=1800&t=st=1710706595~exp=1710707195~hmac=f26dbb7b7ebfeffd639fc63098f6fd5f05e17ebc760cd8440c03f6aa5e46efc5"
+            alt="Banner_002"
             width={1800}
             height={1200}
             className="w-full h-full"
+            style={{ objectFit: 'cover' }}
           />
         </div>
         <div className="relative w-full h-full">
           <Image
-            src="https://img.freepik.com/fotos-gratis/garota-se-escondendo-do-frio-do-inverno-em-seu-sueter-quente-e-macio-ruiva-bonita-puxando-o-colarinho-no-nariz-e_1258-126381.jpg?w=1800&t=st=1710603397~exp=1710603997~hmac=8c29a6ed3586f29bb985ed7e7544d7ca212cc71a5ecf5591967fd4f253065f9d"
-            alt="..."
+            src={
+              'https://img.freepik.com/fotos-gratis/compradora-de-jovem-feliz-mostrando-sinal-de-ok-satisfeito-com-bons-descontos-comprando-pessoal-a-venda-segurando_1258-121112.jpg?w=1800&t=st=1710706980~exp=1710707580~hmac=3ed80217e42f1d28298feb46265ce00cfde44b3cd09202259f252849a8f0bfe0'
+            }
+            alt="Banner_003."
             width={1800}
             height={1200}
             className="w-full h-full"
+            style={{ objectFit: 'cover' }}
           />
         </div>
       </Carousel>
