@@ -13,12 +13,12 @@ const Card = ({ src, title, price }) => {
   return (
     <div className="max-w-[350px] h-[400px] flex items-center justify-center">
       <div className="max-w-xs relative rounded-lg overflow-hidden shadow-lg m-10 flex flex-col">
-        <div className="w-[250px] h-[250px] relative">
+        <div className="w-[200px] h-[250px] relative m-5">
           <Image
             src={src}
             alt={title}
-            layout="fill"
-            objectFit="contain"
+            width={250}
+            height={300}
             className="w-full h-full"
           />
         </div>
