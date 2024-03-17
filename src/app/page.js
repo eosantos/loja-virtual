@@ -14,6 +14,7 @@ export default function Home() {
     const getProducts = async () => {
       const productsData = await fetchProducts()
       setProducts(productsData)
+      console.log(productsData) // Imprime os produtos no console
     }
     getProducts()
   }, [])
@@ -23,6 +24,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <CarouselComponent />
+        <h1>Masculino</h1>
         <div className="flex flex-wrap justify-center">
           {products.map((product, index) => (
             <Card
