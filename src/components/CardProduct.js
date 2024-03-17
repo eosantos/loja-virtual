@@ -11,7 +11,7 @@ const Card = ({ src, title, price }) => {
   })
 
   return (
-    <div className="max-w-[350px] h-[450px] flex items-center justify-center">
+    <div className="max-w-[350px] h-[400px] flex items-center justify-center">
       <div className="max-w-xs relative rounded-lg overflow-hidden shadow-lg m-10 flex flex-col">
         <div className="w-[250px] h-[250px] relative">
           <Image

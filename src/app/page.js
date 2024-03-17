@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import CarouselComponent from '@/components/Carousel'
 import { fetchProducts } from '../service/fetchProducts'
 import Card from '@/components/CardProduct'
+import Section from '@/components/Section'
 
 export default function Home() {
   const [menProducts, setMenProducts] = useState([])
@@ -31,32 +32,31 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <CarouselComponent />
-        <section>
-          <h1>Masculino</h1>
-          <div className="flex flex-wrap justify-center">
-            {menProducts.map((product, index) => (
-              <Card
-                key={index}
-                src={product.image}
-                title={product.title}
-                price={product.price}
-              />
-            ))}
-          </div>
-        </section>
-        <section>
-          <h1>Feminino</h1>
-          <div className="flex flex-wrap justify-center">
-            {womenProducts.map((product, index) => (
-              <Card
-                key={index}
-                src={product.image}
-                title={product.title}
-                price={product.price}
-              />
-            ))}
-          </div>
-        </section>
+        <Section title="Masculino" />
+
+        <div className="flex flex-wrap justify-center">
+          {menProducts.map((product, index) => (
+            <Card
+              key={index}
+              src={product.image}
+              title={product.title}
+              price={product.price}
+            />
+          ))}
+        </div>
+
+        <Section title="Feminino" />
+
+        <div className="flex flex-wrap justify-center">
+          {womenProducts.map((product, index) => (
+            <Card
+              key={index}
+              src={product.image}
+              title={product.title}
+              price={product.price}
+            />
+          ))}
+        </div>
       </main>
       <Footer />
     </div>
