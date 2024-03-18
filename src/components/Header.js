@@ -69,7 +69,7 @@ const Header = ({ menSectionRef, womenSectionRef }) => {
             </button>
           </div>
         </header>
-        {/* Modal do menu abaixo do cabeçalho */}
+        {/* Modal do menu mobile */}
         {menuOpen && (
           <div className="absolute top-full right-0 md:left-auto w-50 md:w-50 bg-white border border-gray-200 shadow-md md:relative z-20">
             <nav className="px-8 py-4 text-slate-950">

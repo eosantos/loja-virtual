@@ -39,9 +39,9 @@ export default function Home() {
         {/* Passando as referências para as seções */}
         <Section ref={menSectionRef} title="Masculino" />
         <div className="flex flex-wrap justify-center mb-10">
-          {menProducts.map((product, index) => (
+          {menProducts.map((product) => (
             <Card
-              key={index}
+              key={product.id}
               src={product.image}
               title={product.title}
               price={product.price}
@@ -50,9 +50,9 @@ export default function Home() {
         </div>
         <Section ref={womenSectionRef} title="Feminino" />
         <div className="flex flex-wrap justify-center mb-10">
-          {womenProducts.map((product, index) => (
+          {womenProducts.map((product) => (
             <Card
-              key={index}
+              key={product.id}
               src={product.image}
               title={product.title}
               price={product.price}
