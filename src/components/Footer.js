@@ -37,10 +37,38 @@ const Footer = ({ menSectionRef, womenSectionRef }) => {
           </nav>
         </div>
         <div className="m-5 text-stone-900 flex space-x-4">
-          <BsInstagram className="hover:text-red-500" />
-          <BsFacebook className="hover:text-red-500" />
-          <BsLinkedin className="hover:text-red-500" />
-          <BsYoutube className="hover:text-red-500" />
+          <a
+            href="https://www.instagram.com/irrobaecommerce/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-red-500"
+          >
+            <BsInstagram />
+          </a>
+          <a
+            href="https://www.facebook.com/irrobaecommercebrasil/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-red-500"
+          >
+            <BsFacebook />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/irroba-e-commerce/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-red-500"
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCIr-f2mgovA40G-KiMLAk7A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-red-500"
+          >
+            <BsYoutube />
+          </a>
         </div>
       </div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">

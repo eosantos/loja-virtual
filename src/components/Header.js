@@ -9,6 +9,7 @@ const Header = ({ menSectionRef, womenSectionRef }) => {
   const handleMenuClick = (ref, event) => {
     event.preventDefault() // Impede o comportamento padrão do clique
     ref.current.scrollIntoView({ behavior: 'smooth' })
+    setMenuOpen(false) // Fecha o menu após clicar em um link
   }
 
   return (
